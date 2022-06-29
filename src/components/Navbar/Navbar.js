@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import styles from "./NavbarNew.module.css";
+import "./Navbar.css";
 
-function NavbarNew({ setData, setLoading, setError }) {
+function Navbar({ setData, setLoading, setError }) {
   //Creates a list with the topics and mapped over it to display topics to choose
   const topics = [
     "Business",
@@ -24,6 +24,7 @@ function NavbarNew({ setData, setLoading, setError }) {
         );
         const fetchedData = await response.json();
         //passing setData and setError up as a prop
+        console.log(fetchedData);
         setData(fetchedData);
       } catch (err) {
         setError(err);
@@ -34,12 +35,12 @@ function NavbarNew({ setData, setLoading, setError }) {
   }, [query]);
 
   return (
-    <nav data-testid="navTestId" className={styles.navbar}>
+    <nav data-testid="navTestId" className="navbar">
       {/* update the query state when a topic option is clicked */}
 
       <select
         data-testid="selectTestId"
-        className={styles.select}
+        className="select"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       >
@@ -49,20 +50,20 @@ function NavbarNew({ setData, setLoading, setError }) {
             data-testid={`opTestId-${i}`}
             key={topic}
             value={topic}
-            className={styles.navListItem}
+            className="navListItem"
           >
             {topic}
           </option>
         ))}
       </select>
-      <ul className={styles.navList}>
+      <ul className="navList">
         {topics.map((topic, i) => (
           <li
             data-testid={`liTestId-${i}`}
             key={topic}
             onClick={() => setQuery(topic)}
             value={topic}
-            className={styles.navListItem}
+            className="navListItem"
           >
             {topic}
           </li>
@@ -72,4 +73,4 @@ function NavbarNew({ setData, setLoading, setError }) {
   );
 }
 
-export default NavbarNew;
+export default Navbar;

@@ -1,5 +1,6 @@
-import NavbarNew from "../NavbarNew/NavbarNew";
+import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.css";
+import Navresp from "../Navresp";
 
 function Header({ search, setSearch, setData, setError, setLoading }) {
   //function to fetch the data when the query changed first or the topic options clicked
@@ -76,12 +77,8 @@ function Header({ search, setSearch, setData, setError, setLoading }) {
         </div>
       </div>
       {/* pass data to navbar so it can update the state when user clicks on topic options */}
-
-      <NavbarNew
-        setData={setData}
-        setLoading={setLoading}
-        setError={setError}
-      />
+      <Navresp />
+      <Navbar setData={setData} setLoading={setLoading} setError={setError} />
     </header>
   );
 }
