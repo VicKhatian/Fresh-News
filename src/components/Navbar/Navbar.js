@@ -11,8 +11,12 @@ function Navbar({ setData, setLoading, setError }) {
     "Science",
     "Health",
   ];
-  // added a state to keep track of the topics query
+  //to keep track of the topics query
   const [query, setQuery] = useState("");
+
+  //isNavExpanded is false by default, it will be true only after hamburger button is clicked
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
   //using useEffect I am fetching the data when the topic matches the topic options
   useEffect(() => {
     async function fetchTopics(topic) {
@@ -35,40 +39,48 @@ function Navbar({ setData, setLoading, setError }) {
   }, [query]);
 
   return (
-    <nav data-testid="navTestId" className="navbar">
-      {/* update the query state when a topic option is clicked */}
-
-      <select
-        data-testid="selectTestId"
-        className="select"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+    <nav data-testid="navTestId" className="navigation">
+      <button
+        className="hamburger"
+        onClick={() => {
+          setIsNavExpanded(!isNavExpanded);
+        }}
       >
-        <option value="">Topics</option>{" "}
-        {topics.map((topic, i) => (
-          <option
-            data-testid={`opTestId-${i}`}
-            key={topic}
-            value={topic}
-            className="navListItem"
-          >
-            {topic}
-          </option>
-        ))}
-      </select>
-      <ul className="navList">
-        {topics.map((topic, i) => (
-          <li
-            data-testid={`liTestId-${i}`}
-            key={topic}
-            onClick={() => setQuery(topic)}
-            value={topic}
-            className="navListItem"
-          >
-            {topic}
-          </li>
-        ))}
-      </ul>
+        {/* icon JSX <svg/> is copied from Heroicons.com */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+      <div
+        className={
+          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+        }
+      >
+        <ul className="navList">
+          {topics.map((topic, i) => (
+            <li
+              data-testid={`liTestId-${i}`}
+              key={topic}
+              onClick={() => setQuery(topic)}
+              value={topic}
+              className="navListItem"
+            >
+              {topic}
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }
