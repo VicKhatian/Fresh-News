@@ -1,3 +1,13 @@
+/* ========================================
+Using px (besides other issues) can create serious accessibility barriers such as overruling the font size preferences set by users. I'm using rem instead for this reason
+
+Font size:
+
+Input text 1rem
+Submit button 1.1rem
+
+=========================================== */
+
 @import url("https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* Noticia Text is a contemporary humanist slab serif typeface designed to be used for running text on digital newspapers */
 
@@ -9,8 +19,28 @@
   box-sizing: border-box;
 }
 
-body {
+:root {
   font-family: "Noticia Text", sans-serif;
+  --color-primary: #698e69;
+  --color-primary-light: ##98be97;
+  --color-primary-dark: #3d603e;
+
+  --color-secondary: #f9de9a;
+  --color-secondary-light: ##ffffcb;
+  --color-secondary-dark: #c5ac6b;
+
+  --color-neutral: #575959;
+  --color-neutral-light: #f4f4f4;
+  --color-neutral-dark: #393a3a;
+
+  --color-text-onP: #ffffff;
+  --color-text-onS: #000000;
+
+  --FS-submitt-btn: 1.1rem;
+  --FS-input-text: 1.1rem;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

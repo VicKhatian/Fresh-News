@@ -39,7 +39,7 @@ function Navbar({ setData, setLoading, setError }) {
   }, [query]);
 
   return (
-    <nav data-testid="navTestId" className="navigation">
+    <nav data-testid="navTestId" className="navbar">
       <button
         className="hamburger"
         onClick={() => {
@@ -62,19 +62,14 @@ function Navbar({ setData, setLoading, setError }) {
           />
         </svg>
       </button>
-      <div
-        className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
-        }
-      >
-        <ul className="navList">
+      <div className={isNavExpanded ? "navbar-menu expanded" : "navbar-menu"}>
+        <ul>
           {topics.map((topic, i) => (
             <li
               data-testid={`liTestId-${i}`}
               key={topic}
               onClick={() => setQuery(topic)}
               value={topic}
-              className="navListItem"
             >
               {topic}
             </li>

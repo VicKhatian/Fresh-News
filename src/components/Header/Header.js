@@ -1,6 +1,5 @@
 import Navbar from "../Navbar/Navbar";
-import styles from "./Header.module.css";
-import Navresp from "../Navresp";
+import "./Header.css";
 
 function Header({ search, setSearch, setData, setError, setLoading }) {
   //function to fetch the data when the query changed first or the topic options clicked
@@ -51,18 +50,18 @@ function Header({ search, setSearch, setData, setError, setLoading }) {
     setError(null);
   }
   return (
-    <header data-testid="headerTestId" className={styles.header}>
-      <div className={styles.headerTop}>
-        <p className={styles.logo}>FRESH NEWS</p>{" "}
-        <div className={styles.inputContainer}>
+    <header data-testid="headerTestId" className="header">
+      <div className="header-top">
+        <p className="logo">FRESH NEWS</p>{" "}
+        <div className="inputContainer">
           {/* update the search state when user types in the input field */}
           {/* fetch data when enter key is pressed */}
           {/* hide error when user clicks or focuses on input */}
 
           <input
-            className={styles.input}
+            className="input"
             type="text"
-            placeholder="Search.."
+            placeholder="Type here"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             onKeyPress={handleEnterKey}
@@ -71,13 +70,13 @@ function Header({ search, setSearch, setData, setError, setLoading }) {
           />
           {/* fetch data when button is clicked */}
 
-          <button className={styles.inputButton} onClick={handleClick}>
+          <button className="inputButton" onClick={handleClick}>
             Search
           </button>
         </div>
       </div>
       {/* pass data to navbar so it can update the state when user clicks on topic options */}
-      <Navresp />
+
       <Navbar setData={setData} setLoading={setLoading} setError={setError} />
     </header>
   );
