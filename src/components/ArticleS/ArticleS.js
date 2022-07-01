@@ -5,18 +5,18 @@ import "./ArticleS.css";
 
 function ArticleS({ article }) {
   return (
-    <div data-testid="maTestId" className="article-box">
-      <div className="img-container">
+    <div data-testid="maTestId" className="article-box-S">
+      <div className="img-container-S">
         <img
           data-testid="imgTestId"
-          className="image"
+          className="image-S"
           src={article?.image}
           alt={article?.title}
         />
       </div>
-      <div className="info-container">
+      <div className="info-container-S">
         <a href={article?.url} target="_blank" rel="noreferrer">
-          <h2 data-testid="titleTestId" className="mainDescTitle">
+          <h2 data-testid="titleTestId" className="title-S">
             {article?.title}
           </h2>
         </a>
