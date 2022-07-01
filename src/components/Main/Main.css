@@ -1,8 +1,8 @@
 .container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 1rem;
   grid-template-columns: 10% repeat(4, 1fr);
-  grid-template-rows: 400px 100px 100px 100px 100px 100px;
+  grid-template-rows: 400px 100px 100px 100px 100px 500px;
   grid-template-areas:
     "topic article1 article1 article1 article1 "
     "topic article2 article2 article6 article6"
@@ -11,12 +11,12 @@
     "topic article5 article5 article6 article6"
     "topic article7 article8 article9 article10";
   background-color: white;
+  padding: 1rem 2rem;
 }
 .topic {
   grid-area: topic;
 }
 .article1 {
-  width: 100%;
   grid-area: article1;
 }
 
@@ -57,9 +57,9 @@
 }
 
 @media (max-width: 800px) {
-  .main {
+  .container {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 30px 100px 50px 50px 100px 100px 100px 100px 100px;
+    grid-template-rows: 30px 400px 100px 100px 200px 200px 200px 200px 200px;
     grid-template-areas:
       "topic topic"
       "article1 article1"

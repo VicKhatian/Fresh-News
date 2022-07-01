@@ -4,7 +4,6 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Error from "./components/Error/Error";
-import Body from "./components/Body/Body";
 
 //App renders Header ( that renders Navbar), Main (that renders Article1,2,3,4 (max 10 for free account)), Footer, Error
 
