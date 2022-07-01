@@ -47,14 +47,14 @@ function App() {
       {/* If the data is fetched , Render Main component and pass the data as props */}
       {/* If the query doesn't return data , render NotFound component */}
 
-      {/* {loading ? (
+      {loading ? (
         <p>Loading...</p>
       ) : data?.articles?.length ? (
         <Main articles={data.articles} />
       ) : (
         <Error />
-      )} */}
-      <Body />
+      )}
+
       <Footer />
     </section>
   );

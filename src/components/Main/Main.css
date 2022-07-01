@@ -1,13 +1,74 @@
-.main {
-  width: 100%;
-  background: rgb(192, 155, 155);
+.container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px auto 1fr auto;
   grid-gap: 10px;
+  grid-template-columns: 10% repeat(4, 1fr);
+  grid-template-rows: 400px 100px 100px 100px 100px 100px;
   grid-template-areas:
-    "header"
-    "advert"
-    "content"
-    "footer";
+    "topic article1 article1 article1 article1 "
+    "topic article2 article2 article6 article6"
+    "topic article3 article3 article6 article6"
+    "topic article4 article4 article6 article6"
+    "topic article5 article5 article6 article6"
+    "topic article7 article8 article9 article10";
+  background-color: white;
+}
+.topic {
+  grid-area: topic;
+}
+.article1 {
+  width: 100%;
+  grid-area: article1;
+}
+
+.article2 {
+  grid-area: article2;
+}
+
+.article3 {
+  grid-area: article3;
+}
+
+.article4 {
+  grid-area: article4;
+}
+
+.article5 {
+  grid-area: article5;
+}
+
+.article6 {
+  grid-area: article6;
+}
+
+.article7 {
+  grid-area: article7;
+}
+
+.article8 {
+  grid-area: article8;
+}
+
+.article9 {
+  grid-area: article9;
+}
+
+.article10 {
+  grid-area: article10;
+}
+
+@media (max-width: 800px) {
+  .main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30px 100px 50px 50px 100px 100px 100px 100px 100px;
+    grid-template-areas:
+      "topic topic"
+      "article1 article1"
+      "article2 article3"
+      "article4 article5"
+      "article6 article6"
+      "article7 article7"
+      "article8 article8"
+      "article9 article9"
+      "article10 article10";
+  }
 }
