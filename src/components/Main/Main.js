@@ -4,8 +4,9 @@ import styles from "./Main.css";
 
 function Main({ articles }) {
   return (
-    <main data-testid="mainTestId" className={styles.main}>
+    <main data-testid="mainTestId" className="main">
       {/* populate MainArticle component with the first object from the fetched data */}
+      <div className="current-topic">UK</div>
 
       <Article1 article={articles?.[0]} />
       <hr />

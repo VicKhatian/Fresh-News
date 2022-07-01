@@ -1,0 +1,84 @@
+.main {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 10% repeat(4, 1fr);
+  grid-template-rows: 200px 20px 20px 20px 20px 100px;
+  grid-template-areas:
+    "topic article1 article1 article1 article1 "
+    "topic article2 article2 article6 article6"
+    "topic article3 article3 article6 article6"
+    "topic article4 article4 article6 article6"
+    "topic article5 article5 article6 article6"
+    "topic article7 article8 article9 article10";
+  background-color: white;
+}
+.topic {
+  background-color: gray;
+  grid-area: topic;
+}
+.article1 {
+  background-color: pink;
+  grid-area: article1;
+}
+
+.article2 {
+  background-color: rgb(197, 65, 87);
+  grid-area: article2;
+}
+
+.article3 {
+  background-color: rgb(197, 65, 87);
+  grid-area: article3;
+}
+
+.article4 {
+  background-color: rgb(197, 65, 87);
+  grid-area: article4;
+}
+
+.article5 {
+  background-color: rgb(197, 65, 87);
+  grid-area: article5;
+}
+
+.article6 {
+  background-color: rgb(122, 194, 140);
+  grid-area: article6;
+}
+
+.article7 {
+  background-color: rgb(179, 182, 205);
+  grid-area: article7;
+}
+
+.article8 {
+  background-color: rgb(179, 182, 205);
+  grid-area: article8;
+}
+
+.article9 {
+  background-color: rgb(179, 182, 205);
+  grid-area: article9;
+}
+
+.article10 {
+  background-color: rgb(179, 182, 205);
+  grid-area: article10;
+}
+
+@media (max-width: 800px) {
+  .main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30px 100px 50px 50px 100px 100px 100px 100px 100px;
+    grid-template-areas:
+      "topic topic"
+      "article1 article1"
+      "article2 article3"
+      "article4 article5"
+      "article6 article6"
+      "article7 article7"
+      "article8 article8"
+      "article9 article9"
+      "article10 article10";
+  }
+}

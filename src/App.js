@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Error from "./components/Error/Error";
+import Body from "./components/Body/Body";
 
 //App renders Header ( that renders Navbar), Main (that renders Article1,2,3,4 (max 10 for free account)), Footer, Error
 
@@ -46,13 +47,14 @@ function App() {
       {/* If the data is fetched , Render Main component and pass the data as props */}
       {/* If the query doesn't return data , render NotFound component */}
 
-      {loading ? (
+      {/* {loading ? (
         <p>Loading...</p>
       ) : data?.articles?.length ? (
         <Main articles={data.articles} />
       ) : (
         <Error />
-      )}
+      )} */}
+      <Body />
       <Footer />
     </section>
   );
