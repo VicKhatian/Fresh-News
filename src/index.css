@@ -22,11 +22,11 @@ Submit button 1.1rem
 :root {
   font-family: "Noticia Text", sans-serif;
   --color-primary: #3e7639;
-  --color-primary-light: #a0cc9f;
+  --color-primary-light: #c0ddc0;
   --color-primary-dark: #3d603e;
 
   --color-secondary: #ffbf00;
-  --color-secondary-light: #f8e4a8;
+  --color-secondary-light: #fbebba;
   --color-secondary-dark: #c25e00;
 
   --color-neutral: #575959;
@@ -43,4 +43,9 @@ Submit button 1.1rem
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: white;
+  background: var(--color-primary);
 }

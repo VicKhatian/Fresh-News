@@ -69,4 +69,7 @@ variables are stored in the root in index.css
   .logo {
     font-size: 11vw;
   }
+  .header-top {
+    padding-bottom: 0rem;
+  }
 }

@@ -1,12 +1,11 @@
 .navbar {
-  background-color: white;
+  background-color: var(--color-neutral-light);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 3rem;
   width: 100%;
-  padding: 0.5rem 0rem;
 }
 
 .navbar-menu {
@@ -18,56 +17,85 @@
 
 .navbar-menu li {
   list-style-type: none;
-  margin: 0 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-right: solid var(--color-primary);
+  cursor: pointer;
+  font-size: 1.3rem;
 }
 
+.navbar-menu li:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transition: background-color 0.7s ease;
+}
+
+.navbar-menu li:last-child {
+  border-right: none;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar-menu li {
+    font-size: 2.5vw;
+  }
+}
+
+/* ==========================
+hamburger menu appears at 600px and less, regular menu disappears 
+========================== */
 .hamburger {
   border: 0;
-  height: 40px;
-  width: 40px;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background-color: var(--color-green);
+  height: 36px;
+  width: 36px;
+  padding: 0.1rem;
+  border-radius: 0;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+
   position: absolute;
   top: 50%;
-  right: 50px;
+  right: 25px;
   transform: translateY(-50%);
   display: none;
 }
 
 .hamburger:hover {
-  background-color: var(--color-green);
+  background-color: var(--color-secondary);
+  transition: background-color 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 800px) {
+  .navbar {
+    width: auto;
+    height: 36px;
+    margin: 0rem 2rem;
+  }
+
   .hamburger {
     display: block;
   }
 
+  /* make it disaaper as it doesnot collaps */
   .navbar-menu ul {
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 67px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
-    background-color: white;
-    border-top: 1px solid black;
+    height: 320px;
+    background-color: var(--color-neutral-light);
     display: none;
   }
 
   .navbar-menu li {
     text-align: center;
-    margin: 0;
-  }
-
-  .navbar-menu li:hover {
-    background-color: #eee;
+    width: max-content;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    border-right: none;
   }
 
   .navbar-menu.expanded ul {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }

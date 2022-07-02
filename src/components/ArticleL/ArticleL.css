@@ -26,6 +26,10 @@
   background-color: rgb(243, 238, 238);
 }
 
+.title-L:first-letter {
+  background-color: var(--color-secondary);
+}
+
 .title-L {
   font-size: 2rem;
 }
