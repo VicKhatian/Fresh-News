@@ -1,14 +1,18 @@
+// ==========================
+// topicDisplay - div on the left of main
+// ==========================
+
 import ArticleS from "../ArticleS/ArticleS";
 import ArticleM from "../ArticleM/ArticleM";
 import ArticleL from "../ArticleL/ArticleL";
 
 import "./Main.css";
 
-function Main({ articles }) {
+function Main({ articles, topicDisplay }) {
   return (
     <main data-testid="mainTestId" className="container">
       {/* populate MainArticle component with the first object from the fetched data */}
-      <div className="topic">topic</div>
+      <div className="topic">TOPIC</div>
       <div className="topic"></div>
       <div className="article1">
         <ArticleL article={articles?.[0]} />

@@ -53,6 +53,7 @@ function Header({ search, setSearch, setData, setError, setLoading }) {
   function hideError() {
     setError(null);
   }
+
   return (
     <header data-testid="headerTestId" className="header">
       <div className="header-top">
@@ -61,7 +62,6 @@ function Header({ search, setSearch, setData, setError, setLoading }) {
           {/* update the search state when user types in the input field */}
           {/* fetch data when enter key is pressed */}
           {/* hide error when user clicks or focuses on input */}
-
           <input
             className="input"
             type="text"
@@ -72,8 +72,8 @@ function Header({ search, setSearch, setData, setError, setLoading }) {
             onFocus={hideError}
             onClick={hideError}
           />
-          {/* fetch data when button is clicked */}
 
+          {/* fetch data when button is clicked */}
           <button className="inputButton" onClick={handleClick}>
             Search
           </button>

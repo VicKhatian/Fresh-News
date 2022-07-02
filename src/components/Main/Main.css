@@ -1,6 +1,7 @@
 .container {
   display: grid;
-  grid-gap: 1rem;
+  width: 99%;
+  grid-gap: 1%;
   grid-template-columns: 10% repeat(4, 1fr);
   grid-template-rows: 400px 100px 100px 100px 100px 500px;
   grid-template-areas:
@@ -59,7 +60,7 @@
 @media (max-width: 800px) {
   .container {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 30px 400px 100px 100px 200px 200px 200px 200px 200px;
+    grid-template-rows: 30px 600px 100px 100px 200px 200px 200px 200px 200px;
     grid-template-areas:
       "topic topic"
       "article1 article1"

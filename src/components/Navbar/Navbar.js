@@ -3,6 +3,7 @@ import "./Navbar.css";
 
 function Navbar({ setData, setLoading, setError }) {
   //Creates a list with the topics and mapped over it to display topics to choose
+
   const topics = [
     "Business",
     "Technology",
@@ -26,6 +27,7 @@ function Navbar({ setData, setLoading, setError }) {
             process.env.REACT_APP_API_TOKEN
           }&lang=en`
         );
+
         const fetchedData = await response.json();
         //passing setData and setError up as a prop
         console.log(fetchedData);
@@ -35,6 +37,7 @@ function Navbar({ setData, setLoading, setError }) {
       }
     }
     fetchTopics(query);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
@@ -79,5 +82,11 @@ function Navbar({ setData, setLoading, setError }) {
     </nav>
   );
 }
+let display = "";
+window.onclick = (e) => {
+  console.log(e.target.innerText);
+  display = e.target.innerText;
+  console.log(display);
+};
 
 export default Navbar;
