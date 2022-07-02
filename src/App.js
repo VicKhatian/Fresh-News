@@ -54,7 +54,7 @@ function App() {
         <Error />
       )}
 
-      <Footer />
+      {/* <Footer /> */}
     </section>
   );
 }

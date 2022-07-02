@@ -1,7 +1,5 @@
 .article-box-L {
   display: flex;
-  height: 100%;
-  border: solid red;
 }
 
 .img-container-L {
@@ -86,13 +84,15 @@ responsive desing
   }
 
   .title-L {
-    font-size: calc(1rem + 1vmin);
+    font-size: calc(1.5rem + 1vmin);
+    margin-bottom: 1rem;
   }
 
   .p-L {
-    font-size: 3vw;
+    font-size: calc(1rem + 1vmin);
+    margin-bottom: 1rem;
   }
   .source-L span {
-    font-size: 2.5vw;
+    font-size: calc(0.5rem + 1vmin);
   }
 }

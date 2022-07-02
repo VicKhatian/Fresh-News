@@ -59,17 +59,20 @@
 
 @media (max-width: 800px) {
   .container {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 30px 600px 100px 100px 200px 200px 200px 200px 200px;
+    padding: 1rem 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
     grid-template-areas:
-      "topic topic"
-      "article1 article1"
-      "article2 article3"
-      "article4 article5"
-      "article6 article6"
-      "article7 article7"
-      "article8 article8"
-      "article9 article9"
-      "article10 article10";
+      "topic "
+      "article1 "
+      "article2 "
+      "article3 "
+      "article4 "
+      "article5"
+      "article6"
+      "article7"
+      "article8"
+      "article9"
+      "article10";
   }
 }

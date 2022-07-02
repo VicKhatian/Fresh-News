@@ -1,7 +1,7 @@
 .article-box-S {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
   width: 100%;
   height: 100%;
 }
@@ -20,34 +20,19 @@
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0.5rem;
-  width: 69%;
+  width: 70%;
   font-size: 0.9rem;
   background-color: rgb(243, 238, 238);
 }
 
 @media screen and (max-width: 800px) {
-  .article-box-S {
-    display: flex;
-    flex-direction: row;
-  }
   .img-container-S {
     width: 40%;
     height: 100%;
     background-color: lightgray;
   }
-  .image-S {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
-  .info-container-S {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1rem;
-    width: 59%;
-    height: 100%;
-
-    background-color: rgb(243, 238, 238);
+  .title-S {
+    font-size: calc(1rem + 1vmin);
   }
 }
