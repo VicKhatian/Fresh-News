@@ -21,13 +21,13 @@ Submit button 1.1rem
 
 :root {
   font-family: "Noticia Text", sans-serif;
-  --color-primary: #698e69;
-  --color-primary-light: ##98be97;
+  --color-primary: #3e7639;
+  --color-primary-light: #a0cc9f;
   --color-primary-dark: #3d603e;
 
-  --color-secondary: #f9de9a;
-  --color-secondary-light: ##ffffcb;
-  --color-secondary-dark: #c5ac6b;
+  --color-secondary: #ffbf00;
+  --color-secondary-light: #f8e4a8;
+  --color-secondary-dark: #c25e00;
 
   --color-neutral: #575959;
   --color-neutral-light: #f4f4f4;

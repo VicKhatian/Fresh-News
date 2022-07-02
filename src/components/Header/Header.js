@@ -1,3 +1,7 @@
+// ==============================
+// Component renders header top which includes logo "Fresh news" and searchbar. Bottom is for navbar
+// ==============================
+
 import Navbar from "../Navbar/Navbar";
 import "./Header.css";
 

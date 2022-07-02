@@ -1,3 +1,7 @@
+/* =====================
+variables are stored in the root in index.css 
+===================== */
+
 .header {
   display: flex;
   flex-direction: column;
@@ -8,25 +12,25 @@
 
 .header-top {
   display: flex;
+  height: 75%;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   color: var(--color-text-onP);
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
 }
 
 .logo {
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .inputContainer {
   background-color: var(--color-neutral-light);
   width: 100%;
-  max-width: 25rem;
+  max-width: 30rem;
   display: flex;
   margin-top: 1rem;
-  /* border: 2px solid var(--color-neutral-light); */
 }
 .input {
   flex: 1;
@@ -53,10 +57,16 @@
   background-color: var(--color-secondary-dark);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1088px) {
   .header-top {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    font-size: 11vw;
   }
 }
