@@ -2,6 +2,25 @@
 Using px (besides other issues) can create serious accessibility barriers such as overruling the font size preferences set by users. I'm using rem instead for this reason
 
 Font size:
+=== L ===
+
+ArticleL-title: 2rem
+ArticleL-p: 1.3rem
+Span: 0.7rem, uppercase, spacing 2px
+=media
+Article1-title: font-size: calc(1.3rem - 1vmin);
+Article1-p: font-size: calc(0.8rem + 1vmin);
+Span: font-size: calc(0.3rem + 1vmin);
+
+=== M ===
+ArticleM-title: 1.3rem
+ArticleM-p: calc(0.5rem + 1vmin)
+
+=== S ===
+ArticleS-title: calc(0.5rem + 1vmin);
+=media
+ArticleS-title: calc(0.8rem + 1vmin);
+
 
 Input text 1rem
 Submit button 1.1rem

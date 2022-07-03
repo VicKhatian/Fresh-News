@@ -1,5 +1,6 @@
 .article-box-L {
   display: flex;
+  height: auto;
 }
 
 .img-container-L {
@@ -29,11 +30,13 @@
 
 .title-L {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .p-L {
   font-size: 1.3rem;
   text-align: justify;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -41,13 +44,21 @@ a {
   text-decoration: none;
 }
 
-/* ====================================
-I like deviders between elements
-==================================== */
+/* span width should be fixed so not to spread on 2 lines */
+.source-L {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  border: solid red;
+  min-width: 100%;
+  font-size: 0.7rem;
+}
+
 .source-L span {
-  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   padding-right: 1rem;
-  padding-left: 1rem;
+  width: auto;
   border-right: solid 1px gray;
 }
 .source-L span:first-child {
@@ -58,9 +69,9 @@ I like deviders between elements
 }
 
 /* 
-====================================
+======
 responsive desing 
-==================================== */
+====== */
 
 @media screen and (max-width: 800px) {
   .article-box-L {
@@ -84,15 +95,13 @@ responsive desing
   }
 
   .title-L {
-    font-size: calc(1.5rem + 1vmin);
-    margin-bottom: 1rem;
+    font-size: calc(1.3rem + 1vmin);
   }
 
   .p-L {
-    font-size: calc(1rem + 1vmin);
-    margin-bottom: 1rem;
+    font-size: calc(0.8rem + 1vmin);
   }
   .source-L span {
-    font-size: calc(0.5rem + 1vmin);
+    font-size: calc(0.3rem + 1vmin);
   }
 }

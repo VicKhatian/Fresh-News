@@ -6,7 +6,7 @@
   height: 100%;
 }
 .img-container-M {
-  height: 40%;
+  height: 50%;
   background-color: lightgray;
 }
 .image-M {
@@ -18,10 +18,26 @@
 .info-container-M {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 1rem 1rem;
-  height: 59%;
-
+  height: 50%;
   background-color: rgb(243, 238, 238);
+}
+
+.title-M {
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  line-height: 1.3rem;
+}
+
+.p-M-container {
+  border: solid red;
+  overflow: hidden;
+}
+.p-M {
+  font-size: calc(0.5rem + 1vmin);
+  line-height: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 800px) {

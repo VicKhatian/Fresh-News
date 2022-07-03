@@ -16,15 +16,17 @@ function ArticleM({ article }) {
       </div>
       <div className="info-container-M">
         <a href={article?.url} target="_blank" rel="noreferrer">
-          <h2 data-testid="title-M" className="mainDescTitle">
+          <h2 data-testid="title-M" className="title-M">
             {article?.title}
           </h2>
         </a>
-        <a href={article?.url} target="_blank" rel="noreferrer">
-          <p data-testid="descTestId" className="p-M">
-            {article?.description}
-          </p>
-        </a>
+        <div className="p-M-container">
+          <a href={article?.url} target="_blank" rel="noreferrer">
+            <p data-testid="descTestId" className="p-M">
+              {article?.description}
+            </p>
+          </a>
+        </div>
       </div>
     </article>
   );
