@@ -24,12 +24,13 @@ function ArticleL({ article }) {
             {article?.title}
           </h2>
         </a>
-        <a href={article?.url} target="_blank" rel="noreferrer">
-          <p data-testid="descTestId" className="p-L">
-            {article?.description}
-          </p>
-        </a>
-
+        <div className="p-L-container">
+          <a href={article?.url} target="_blank" rel="noreferrer">
+            <p data-testid="descTestId" className="p-L">
+              {article?.description}
+            </p>
+          </a>
+        </div>
         <p data-testid="srcTestId" className="source-L">
           <span>{article?.source?.name}</span>
           <span>{date}</span>

@@ -4,7 +4,7 @@
 }
 
 .img-container-L {
-  width: 40%;
+  width: 50%;
   background-color: lightgray;
 }
 
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem 1rem;
-  width: 60%;
+  width: 50%;
 
   background-color: rgb(243, 238, 238);
 }
@@ -30,13 +30,17 @@
 
 .title-L {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 2rem;
 }
 
+.p-L-container {
+  overflow: hidden;
+}
 .p-L {
   font-size: 1.3rem;
-  text-align: justify;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
 }
 
 a {
@@ -48,16 +52,15 @@ a {
 .source-L {
   display: flex;
   justify-content: flex-start;
-  gap: 1rem;
-  border: solid red;
+  gap: 0.5rem;
   min-width: 100%;
   font-size: 0.7rem;
 }
 
 .source-L span {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  padding-right: 1rem;
+  letter-spacing: 1px;
+  padding-right: 0.5rem;
   width: auto;
   border-right: solid 1px gray;
 }

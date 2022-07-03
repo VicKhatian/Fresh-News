@@ -1,9 +1,9 @@
 .container {
   display: grid;
   width: 99%;
-  grid-gap: 1%;
+  grid-gap: 1vw;
   grid-template-columns: 10% repeat(4, 1fr);
-  grid-template-rows: auto 100px 100px 100px 100px repeat(2, 500px);
+  grid-template-rows: auto 100px 100px 100px 100px repeat(2, 400px);
   grid-template-areas:
     "topic article1 article1 article1 article1 "
     "topic article2 article2 article6 article6"

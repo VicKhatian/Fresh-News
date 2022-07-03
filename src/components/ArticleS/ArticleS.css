@@ -24,6 +24,7 @@
 
 .title-S {
   font-size: calc(0.5rem + 1vmin);
+  line-height: 1rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -37,5 +38,6 @@
 
   .title-S {
     font-size: calc(0.8rem + 1vmin);
+    line-height: 1.5rem;
   }
 }
